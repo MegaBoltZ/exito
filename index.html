@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exito</title>
+  </head>
+  <body>
+    <!-- section 1 -->
+    <h2>Click to see</h2>
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()"
+    >
+      Click Me
+    </button>
+
+    <p id="demo"></p>
+
+    <!-- section 2 -->
+    <p>Now the colour of bulb will change</p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('image').src='assets/images/pic_bulboff.gif'"
+    >
+      Turn off
+    </button>
+
+    <img id="image" src="assets/images/pic_bulboff.gif" alt="" width="100px" />
+
+    <button
+      type="button"
+      onclick="document.getElementById('image').src='assets/images/pic_bulbon.gif'"
+    >
+      Turn On
+    </button>
+
+    <!-- section 3 -->
+
+    <script>
+      function fnc1() {
+        document.getElementById("id1").innerHTML = "Change made";
+      }
+    </script>
+
+    <p id="id1">It will change</p>
+    <button type="button" onclick="fnc1()">Click</button>
+
+    <!-- section 4 -->
+
+    <script>
+      let a = 1;
+      let b = 2;
+
+      function fnc2() {
+        document.getElementById("id2").innerHTML = "simple change";
+        // document.write(a + b);
+        alert(a + b);
+        console.log(a + b);
+      }
+    </script>
+
+    <p id="id2">4 changes</p>
+    <button type="button" onclick="fnc2()">Click to see</button>
+
+    <!-- section 5 -->
+
+    <script>
+      const fnc3 = (val1) => {
+        const var1 = val1 ? val1.var1 : "stranger";
+        return `konichiwa, ${var1}`;
+      };
+      console.log(fnc3({ var1: "alif" }));
+      console.log(fnc3(null));
+    </script>
+  </body>
+</html>
